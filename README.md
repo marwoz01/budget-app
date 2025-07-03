@@ -13,3 +13,7 @@ Prosta aplikacja do śledzenia miesięcznego budżetu.
 - HTML5
 - CSS3 + LESS
 - JavaScript
+
+# Podgląd
+
+https://marwoz01.github.io/budget-app/
