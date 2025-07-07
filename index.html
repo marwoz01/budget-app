@@ -28,7 +28,7 @@
       <div class="container">
         <h1>Twój Budżet</h1>
 
-        <div class="budget-scope">
+        <div class="category-header">
           <p>
             <span class="current-amount" id="current">500zł</span>
             <span class="separator"> / </span>
@@ -54,6 +54,73 @@
         </div>
       </div>
     </header>
+
+    <main>
+      <!-- Transactions List -->
+      <section
+        class="transactions"
+        id="transactionsSection"
+        style="display: none"
+      >
+        <div class="container">
+          <div class="category-header">
+            <h2>Ostatnie transakcje</h2>
+            <button class="btn">Więcej</button>
+          </div>
+          <div class="transaction">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <div>
+              <h3>Zakupy spożywcze</h3>
+              <p>07.07.2025</p>
+            </div>
+            <h4>-30,74zł</h4>
+          </div>
+        </div>
+      </section>
+
+      <!-- Add Transaction Window -->
+      <section>
+        <div class="modal-wrapper" id="modal" style="display: none">
+          <div
+            class="new-transaction"
+            id="new-transaction"
+            style="display: none"
+          >
+            <form>
+              <label for="title">Tytuł:</label>
+              <input type="text" name="title" id="transaction-title" />
+              <label for="kwota">Kwota:</label>
+              <input type="number" name="price" id="transaction-price" />
+              <label for="data">Data:</label>
+              <input type="date" name="date" id="transaction-date" />
+              <label for="data">Kategoria:</label>
+              <select name="category" id="transaction-category">
+                <option value="spozywcze">Spożywcze</option>
+                <option value="transport">Transport</option>
+                <option value="rozrywka">Rozrywka</option>
+                <option value="inne">Inne</option>
+              </select>
+              <input
+                type="submit"
+                value="Dodaj"
+                class="btn-primary"
+                id="add-transaction"
+              />
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="centered">
+          <button class="btn-action" id="open-modal-btn">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+      </div>
+    </footer>
 
     <script src="/js/app.js"></script>
   </body>

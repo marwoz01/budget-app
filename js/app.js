@@ -2,6 +2,11 @@ const editBtn = document.getElementById("editBtn");
 const saveBtn = document.getElementById("saveBtn");
 const totalDisplay = document.getElementById("totalDisplay");
 const totalInput = document.getElementById("totalInput");
+const openModalBtn = document.getElementById("open-modal-btn");
+const transactionForm = document.getElementById("new-transaction");
+const modal = document.getElementById("modal");
+const transactionsSection = document.getElementById("transactionsSection");
+const addTransaction = document.getElementById("add-transaction");
 
 // Edycja zakresu budżetu
 editBtn.addEventListener("click", () => {
@@ -41,3 +46,13 @@ function updateProgressBar() {
     bar.style.width = `${percent}%`;
   }
 }
+
+// Dodanie nowej transakcji
+function openNewTransaction() {
+  openModalBtn.addEventListener("click", () => {
+    modal.style.display = "flex";
+    transactionForm.style.display = "block";
+  });
+}
+
+openNewTransaction();
